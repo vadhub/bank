@@ -23,7 +23,7 @@
         Кредит дается на срок: <strong>${credit_app.period}</strong> дней.
     </p>
 
-    <form:form action="save_credit_agreement" method="POST">
+    <form:form action="${pageContext.request.contextPath}/save_credit_agreement/${creadit_agrmt.idAgrmt}" method="POST">
         <button type="submit" class="btn btn-primary">Подписать</button>
     </form:form>
 </div>

@@ -8,4 +8,5 @@ public interface CreditAgreementDao {
     List<CreditAgreement> findAll();
     CreditAgreement save(CreditAgreement agreement);
     CreditAgreement update(CreditAgreement agreement);
+    CreditAgreement findById(Long id);
 }

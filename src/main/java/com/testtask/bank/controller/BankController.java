@@ -8,10 +8,7 @@ import com.testtask.bank.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
 
@@ -41,7 +38,12 @@ public class BankController {
 
     @GetMapping("/saveAgreement/{id}")
     public String showAgreement(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("credit_app", creditAppService.findById(id));
+        CreditApp creditApp = creditAppService.findById(id);
+        CreditAgreement creditAgreement = creditAgreementService.save(new CreditAgreement(creditApp));
+
+        model.addAttribute("credit_app", creditApp);
+        model.addAttribute("creadit_agrmt", creditAgreement);
+
         return "credit_agrmt_create";
     }
 
@@ -53,8 +55,6 @@ public class BankController {
         if (save.getApprove() == 0) {
             return "disapprove_credit";
         }
-
-        creditAgreementService.save(new CreditAgreement(save));
 
         return "redirect:/saveAgreement/"+save.getIdCredit();
     }
@@ -77,15 +77,17 @@ public class BankController {
         return "credit_agrmt_list";
     }
 
-    @PostMapping("/save_credit_agreement")
-    public String insertCreditAgreement(@ModelAttribute("credit") CreditAgreement credit) {
+    @PostMapping("/save_credit_agreement/{id}")
+    public String insertCreditAgreement(@PathVariable("id") Long id) {
 
         Date sqlDate = new Date(System.currentTimeMillis());
-        credit.setSigh(1);
-        credit.setDateSigh(sqlDate);
-        creditAgreementService.update(credit);
 
-        return "redirect:/main";
+        CreditAgreement creditAgreement = creditAgreementService.findById(id);
+        creditAgreement.setSigh(1);
+        creditAgreement.setDateSigh(sqlDate);
+        creditAgreementService.update(creditAgreement);
+
+        return "main_page";
     }
 
 }

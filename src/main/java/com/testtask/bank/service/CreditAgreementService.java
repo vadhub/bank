@@ -9,6 +9,7 @@ import java.util.List;
 
 @Service
 public class CreditAgreementService {
+
     private CreditAgreementDao dao;
 
     @Autowired
@@ -29,5 +30,10 @@ public class CreditAgreementService {
     @Transactional
     public CreditAgreement update(CreditAgreement credit){
         return dao.update(credit);
+    }
+
+    @Transactional
+    public CreditAgreement findById(Long id) {
+        return dao.findById(id);
     }
 }

@@ -33,4 +33,9 @@ public class CreditAgreementDaoImpl implements CreditAgreementDao {
         template.update(agreement);
         return agreement;
     }
+
+    @Override
+    public CreditAgreement findById(Long id) {
+        return template.getSessionFactory().getCurrentSession().get(CreditAgreement.class, id);
+    }
 }
