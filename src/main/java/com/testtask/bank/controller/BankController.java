@@ -1,6 +1,7 @@
 package com.testtask.bank.controller;
 
 import com.testtask.bank.entity.CreditApp;
+import com.testtask.bank.service.CreditAgreementService;
 import com.testtask.bank.service.CreditAppService;
 import com.testtask.bank.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,13 @@ public class BankController {
 
     private CustomerService customerService;
     private CreditAppService creditAppService;
+    private CreditAgreementService creditAgreementService;
 
     @Autowired
-    public BankController(CustomerService customerService, CreditAppService creditAppService) {
+    public BankController(CustomerService customerService, CreditAppService creditAppService, CreditAgreementService creditAgreementService) {
         this.customerService = customerService;
         this.creditAppService = creditAppService;
+        this.creditAgreementService = creditAgreementService;
     }
 
     @GetMapping("/main")
@@ -64,7 +67,8 @@ public class BankController {
     }
 
     @GetMapping("/credit_agrmt_list")
-    public String showCreditAgrmtList() {
+    public String showCreditAgrmtList(Model model) {
+        model.addAttribute("credit_agreement", creditAgreementService.getAll());
         return "credit_agrmt_list";
     }
 
