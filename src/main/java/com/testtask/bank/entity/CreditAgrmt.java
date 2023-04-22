@@ -21,6 +21,14 @@ public class CreditAgrmt {
     @JoinColumn(name = "id_credit")
     private CreditApp creditApp;
 
+    public CreditAgrmt() {
+    }
+
+    public CreditAgrmt(Date dateSigh, int sigh) {
+        this.dateSigh = dateSigh;
+        this.sigh = sigh;
+    }
+
     public Date getDateSigh() {
         return dateSigh;
     }

@@ -39,6 +39,20 @@ public class Customer {
     @JoinColumn(name = "id_work")
     private Work work;
 
+    public Customer() {
+    }
+
+    public Customer(String firstName, String lastName, String patronymic, String adress, int seria, int number, int familyStatus, int phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.patronymic = patronymic;
+        this.adress = adress;
+        this.seria = seria;
+        this.number = number;
+        this.familyStatus = familyStatus;
+        this.phoneNumber = phoneNumber;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +

@@ -23,6 +23,16 @@ public class CreditApp {
     @Column(name = "approve")
     private int approve;
 
+    public CreditApp() {
+    }
+
+    public CreditApp(Customer customer, int sum, int period, int approve) {
+        this.customer = customer;
+        this.sum = sum;
+        this.period = period;
+        this.approve = approve;
+    }
+
     public Customer getCustomer() {
         return customer;
     }

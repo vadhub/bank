@@ -24,6 +24,16 @@ public class Work {
     @Column(name = "period_to")
     private Date periodTo;
 
+    public Work() {
+    }
+
+    public Work(String nameOrg, String positionJob, Date periodFrom, Date periodTo) {
+        this.nameOrg = nameOrg;
+        this.positionJob = positionJob;
+        this.periodFrom = periodFrom;
+        this.periodTo = periodTo;
+    }
+
     public String getNameOrg() {
         return nameOrg;
     }
