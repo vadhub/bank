@@ -26,7 +26,7 @@ public class CreditAppService {
     @Transactional
     public CreditApp save(CreditApp credit) {
         Random random = new Random();
-        if (random.nextBoolean()) {
+        if (true) {
             credit.setPeriod((int) (Math.random() * 335) + 30);
             credit.setApprove(1);
         } else {
@@ -35,7 +35,7 @@ public class CreditAppService {
         return dao.save(credit);
     }
 
-    public CreditApp findById(int id) {
+    public CreditApp findById(Long id) {
         return dao.findById(id);
     }
 }

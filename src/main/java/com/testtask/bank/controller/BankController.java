@@ -40,7 +40,7 @@ public class BankController {
     }
 
     @GetMapping("/saveAgreement/{id}")
-    public String showAgreement(@PathVariable("id") int id, Model model) {
+    public String showAgreement(@PathVariable("id") Long id, Model model) {
         model.addAttribute("credit_app", creditAppService.findById(id));
         return "credit_agrmt_create";
     }

@@ -9,6 +9,7 @@ public class CreditAgreement {
 
     @Id
     @Column(name = "id_credit_agmt")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idAgrmt;
 
     @Column(name = "date_sigh")

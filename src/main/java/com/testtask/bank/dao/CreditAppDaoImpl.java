@@ -32,8 +32,9 @@ public class CreditAppDaoImpl implements CreditAppDao {
     }
 
     @Override
-    public CreditApp findById(int id) {
-        return Objects.requireNonNull(template.getSessionFactory()).getCurrentSession().get(CreditApp.class, id);
+    @Transactional
+    public CreditApp findById(Long id) {
+        return template.getSessionFactory().getCurrentSession().get(CreditApp.class, id);
     }
 
 }

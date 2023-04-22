@@ -7,5 +7,5 @@ import java.util.List;
 public interface CreditAppDao {
     List<CreditApp> findAll();
     CreditApp save(CreditApp creditApp);
-    CreditApp findById(int id);
+    CreditApp findById(Long id);
 }
