@@ -52,7 +52,7 @@
                 <value>com.testtask.bank.entity.Customer</value>
                 <value>com.testtask.bank.entity.CreditApp</value>
                 <value>com.testtask.bank.entity.Work</value>
-                <value>com.testtask.bank.entity.CreditAgrmt</value>
+                <value>com.testtask.bank.entity.CreditAgreement</value>
             </list>
         </property>
     </bean>

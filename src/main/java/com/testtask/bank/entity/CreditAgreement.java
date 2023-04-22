@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "credit_agmt")
-public class CreditAgrmt {
+public class CreditAgreement {
 
     @Id
     @Column(name = "id_credit_agmt")
@@ -21,10 +21,10 @@ public class CreditAgrmt {
     @JoinColumn(name = "id_credit")
     private CreditApp creditApp;
 
-    public CreditAgrmt() {
+    public CreditAgreement() {
     }
 
-    public CreditAgrmt(Date dateSigh, int sigh) {
+    public CreditAgreement(Date dateSigh, int sigh) {
         this.dateSigh = dateSigh;
         this.sigh = sigh;
     }
