@@ -1,10 +1,20 @@
 package com.testtask.bank.controller;
 
+import com.testtask.bank.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BankController {
+
+    private CustomerService customerService;
+
+    @Autowired
+    public BankController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
 
     @GetMapping("/main")
     public String showMainPage() {
@@ -17,7 +27,8 @@ public class BankController {
     }
 
     @GetMapping("/customer_list")
-    public String showCustomerList() {
+    public String showCustomerList(Model model) {
+        model.addAttribute("customer", customerService.getAll());
         return "customer_list";
     }
 
