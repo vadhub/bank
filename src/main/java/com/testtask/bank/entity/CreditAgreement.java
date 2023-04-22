@@ -24,9 +24,14 @@ public class CreditAgreement {
     public CreditAgreement() {
     }
 
-    public CreditAgreement(Date dateSigh, int sigh) {
+    public CreditAgreement(Date dateSigh, int sigh, CreditApp creditApp) {
         this.dateSigh = dateSigh;
         this.sigh = sigh;
+        this.creditApp = creditApp;
+    }
+
+    public CreditAgreement(CreditApp creditApp) {
+        this.creditApp = creditApp;
     }
 
     public Date getDateSigh() {

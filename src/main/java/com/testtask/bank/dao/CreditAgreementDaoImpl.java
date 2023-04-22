@@ -27,4 +27,10 @@ public class CreditAgreementDaoImpl implements CreditAgreementDao {
         template.save(agreement);
         return agreement;
     }
+
+    @Override
+    public CreditAgreement update(CreditAgreement agreement) {
+        template.update(agreement);
+        return agreement;
+    }
 }

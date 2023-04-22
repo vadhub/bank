@@ -1,5 +1,6 @@
 package com.testtask.bank.controller;
 
+import com.testtask.bank.entity.CreditAgreement;
 import com.testtask.bank.entity.CreditApp;
 import com.testtask.bank.service.CreditAgreementService;
 import com.testtask.bank.service.CreditAppService;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.sql.Date;
 
 @Controller
 public class BankController {
@@ -42,7 +45,7 @@ public class BankController {
         return "credit_agrmt_create";
     }
 
-    @PostMapping("/saveCredit")
+    @PostMapping("/save_credit")
     public String insertCredit(@ModelAttribute("credit") CreditApp credit) {
 
         CreditApp save = creditAppService.save(credit);
@@ -50,6 +53,8 @@ public class BankController {
         if (save.getApprove() == 0) {
             return "disapprove_credit";
         }
+
+        creditAgreementService.save(new CreditAgreement(save));
 
         return "redirect:/saveAgreement/"+save.getIdCredit();
     }
@@ -70,6 +75,17 @@ public class BankController {
     public String showCreditAgrmtList(Model model) {
         model.addAttribute("credit_agreement", creditAgreementService.getAll());
         return "credit_agrmt_list";
+    }
+
+    @PostMapping("/save_credit_agreement")
+    public String insertCreditAgreement(@ModelAttribute("credit") CreditAgreement credit) {
+
+        Date sqlDate = new Date(System.currentTimeMillis());
+        credit.setSigh(1);
+        credit.setDateSigh(sqlDate);
+        creditAgreementService.update(credit);
+
+        return "redirect:/main";
     }
 
 }

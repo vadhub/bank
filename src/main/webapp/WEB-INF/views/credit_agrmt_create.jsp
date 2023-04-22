@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <%@include file="./base.jsp" %>
@@ -21,6 +22,10 @@
         <strong>${credit_app.sum}</strong>.
         Кредит дается на срок: <strong>${credit_app.period}</strong> дней.
     </p>
+
+    <form:form action="save_credit_agreement" method="POST">
+        <button type="submit" class="btn btn-primary">Подписать</button>
+    </form:form>
 </div>
 </body>
 </html>

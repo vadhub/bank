@@ -7,4 +7,5 @@ import java.util.List;
 public interface CreditAgreementDao {
     List<CreditAgreement> findAll();
     CreditAgreement save(CreditAgreement agreement);
+    CreditAgreement update(CreditAgreement agreement);
 }

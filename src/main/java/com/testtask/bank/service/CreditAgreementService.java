@@ -25,4 +25,9 @@ public class CreditAgreementService {
     public CreditAgreement save(CreditAgreement credit) {
         return dao.save(credit);
     }
+
+    @Transactional
+    public CreditAgreement update(CreditAgreement credit){
+        return dao.update(credit);
+    }
 }
