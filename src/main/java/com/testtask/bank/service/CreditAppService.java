@@ -1,6 +1,6 @@
 package com.testtask.bank.service;
 
-import com.testtask.bank.dao.CreditAppDaoImpl;
+import com.testtask.bank.dao.CreditAppDao;
 import com.testtask.bank.entity.CreditApp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,10 +11,10 @@ import java.util.Random;
 
 @Service
 public class CreditAppService {
-    private CreditAppDaoImpl dao;
+    private CreditAppDao dao;
 
     @Autowired
-    public CreditAppService(CreditAppDaoImpl dao) {
+    public CreditAppService(CreditAppDao dao) {
         this.dao = dao;
     }
 

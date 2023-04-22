@@ -73,14 +73,13 @@
             <div class="col">
                 <div class="form-group">
                     <label for="period_from">Период работы с</label>
-                    <input type="date" class="form-control" id="period_from" name="customer.work.periodFrom"
-                           placeholder="Введите период с">
+                    <input type="date" class="form-control" id="period_from" name="customer.work.periodFrom">
                 </div>
 
                 <div class="form-group">
                     <label for="position_job">Должность</label>
                     <input type="text" class="form-control" id="position_job" name="customer.work.positionJob"
-                           placeholder="Введите должность">
+                    placeholder="Введите должность">
                 </div>
 
             </div>
@@ -88,8 +87,7 @@
 
                 <div class="form-group">
                     <label for="period_to">Период работы до</label>
-                    <input type="date" class="form-control" id="period_to" name="customer.work.periodTo"
-                           placeholder="Введите период до">
+                    <input type="date" class="form-control" id="period_to" name="customer.work.periodTo">
                 </div>
 
                 <div class="form-group">
