@@ -87,7 +87,7 @@ public class BankController {
         creditAgreement.setDateSigh(sqlDate);
         creditAgreementService.update(creditAgreement);
 
-        return "main_page";
+        return "redirect:/main";
     }
 
 }
