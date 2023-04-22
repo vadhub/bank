@@ -12,7 +12,7 @@
     <h1>Оформление заявки на кредит</h1>
 
     <%--@elvariable id="credit" type="com.testtask.bank.entity.CreditApp"--%>
-    <form:form action="saveCredit" modelAttribute="credit" method="POST">
+    <form:form action="save_credit" modelAttribute="credit" method="POST">
 
         <div class="row">
             <div class="col">
