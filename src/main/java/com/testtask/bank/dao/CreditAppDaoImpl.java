@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Objects;
 
 @Repository
 public class CreditAppDaoImpl implements CreditAppDao {
@@ -28,6 +29,11 @@ public class CreditAppDaoImpl implements CreditAppDao {
     public CreditApp save(CreditApp credit) {
         template.save(credit);
         return credit;
+    }
+
+    @Override
+    public CreditApp findById(int id) {
+        return Objects.requireNonNull(template.getSessionFactory()).getCurrentSession().get(CreditApp.class, id);
     }
 
 }

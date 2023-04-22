@@ -35,7 +35,7 @@ public class BankController {
 
     @GetMapping("/saveAgreement/{id}")
     public String showAgreement(@PathVariable("id") int id, Model model) {
-        model.addAttribute("customer_id", customerService.findById(id));
+        model.addAttribute("credit_app", creditAppService.findById(id));
         return "credit_agrmt_create";
     }
 
@@ -48,7 +48,7 @@ public class BankController {
             return "disapprove_credit";
         }
 
-        return "redirect:/saveAgreement/"+save.getCustomer().getId();
+        return "redirect:/saveAgreement/"+save.getIdCredit();
     }
 
     @GetMapping("/customer_list")
