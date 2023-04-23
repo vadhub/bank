@@ -12,11 +12,11 @@ public class CreditAgreement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idAgrmt;
 
-    @Column(name = "date_sigh")
-    private Date dateSigh;
+    @Column(name = "date_sign")
+    private Date dateSign;
 
-    @Column(name = "sigh")
-    private int sigh;
+    @Column(name = "sign")
+    private int sign;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_credit")
@@ -26,8 +26,8 @@ public class CreditAgreement {
     }
 
     public CreditAgreement(Date dateSigh, int sigh, CreditApp creditApp) {
-        this.dateSigh = dateSigh;
-        this.sigh = sigh;
+        this.dateSign = dateSigh;
+        this.sign = sigh;
         this.creditApp = creditApp;
     }
 
@@ -35,20 +35,20 @@ public class CreditAgreement {
         this.creditApp = creditApp;
     }
 
-    public Date getDateSigh() {
-        return dateSigh;
+    public Date getDateSign() {
+        return dateSign;
     }
 
-    public void setDateSigh(Date dateSigh) {
-        this.dateSigh = dateSigh;
+    public void setDateSign(Date dateSign) {
+        this.dateSign = dateSign;
     }
 
-    public int getSigh() {
-        return sigh;
+    public int getSign() {
+        return sign;
     }
 
-    public void setSigh(int sigh) {
-        this.sigh = sigh;
+    public void setSign(int sign) {
+        this.sign = sign;
     }
 
     public CreditApp getCreditApp() {
@@ -71,8 +71,8 @@ public class CreditAgreement {
     public String toString() {
         return "CreditAgrmt{" +
                 "idAgrmt=" + idAgrmt +
-                ", dateSigh=" + dateSigh +
-                ", sigh=" + sigh +
+                ", dateSign=" + dateSign +
+                ", sign=" + sign +
                 ", creditApp=" + creditApp +
                 '}';
     }
