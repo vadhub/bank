@@ -20,12 +20,30 @@
         </strong>, номер: <strong>${credit_app.customer.number}
         </strong>, заключаю кредитный договор на сумму
         <strong>${credit_app.sum}</strong>.
-        Кредит дается на срок: <strong>${credit_app.period}</strong> дней.
+        Кредит дается на срок: <strong>${credit_app.period}</strong> д.
     </p>
+    <div class="row">
+        <div class="col">
+            ${creadit_agrmt.sign==1 ? 'Подписан' : 'Не подписан'}
+        </div>
+
+        <div class="col">
+            Дата: ${creadit_agrmt.dateSign!=null ? creadit_agrmt.dateSign : ''}
+        </div>
+
+    </div>
 
     <form:form action="${pageContext.request.contextPath}/save_credit_agreement/${creadit_agrmt.idAgrmt}" method="POST">
-        <button type="submit" class="btn btn-primary">Подписать</button>
+        <button id="sign_btn" type="submit" class="btn btn-primary">Подписать</button>
     </form:form>
+
+
+    <script type="text/javascript">
+        const sign = ${creadit_agrmt.sign==1}
+        if (sign) document.getElementById("sign_btn").disabled = true;
+    </script>
+
+    <a href="${pageContext.request.contextPath}/main" class="btn btn-warning">На главную</a>
 </div>
 </body>
 </html>

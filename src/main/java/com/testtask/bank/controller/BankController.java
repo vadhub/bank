@@ -38,11 +38,10 @@ public class BankController {
 
     @GetMapping("/saveAgreement/{id}")
     public String showAgreement(@PathVariable("id") Long id, Model model) {
-        CreditApp creditApp = creditAppService.findById(id);
-        CreditAgreement creditAgreement = creditAgreementService.save(new CreditAgreement(creditApp));
+        CreditAgreement creditAgreement = creditAgreementService.findById(id);
 
-        model.addAttribute("credit_app", creditApp);
         model.addAttribute("creadit_agrmt", creditAgreement);
+        model.addAttribute("credit_app", creditAgreement.getCreditApp());
 
         return "credit_agrmt_create";
     }
@@ -56,7 +55,9 @@ public class BankController {
             return "disapprove_credit";
         }
 
-        return "redirect:/saveAgreement/"+save.getIdCredit();
+        CreditAgreement creditAgreement = creditAgreementService.save(new CreditAgreement(save));
+
+        return "redirect:/saveAgreement/"+creditAgreement.getIdAgrmt();
     }
 
     @GetMapping("/customer_list")
@@ -83,11 +84,11 @@ public class BankController {
         Date sqlDate = new Date(System.currentTimeMillis());
 
         CreditAgreement creditAgreement = creditAgreementService.findById(id);
-        creditAgreement.setSigh(1);
-        creditAgreement.setDateSigh(sqlDate);
+        creditAgreement.setSign(1);
+        creditAgreement.setDateSign(sqlDate);
         creditAgreementService.update(creditAgreement);
 
-        return "redirect:/main";
+        return "redirect:/saveAgreement/"+creditAgreement.getIdAgrmt();
     }
 
 }
