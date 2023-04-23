@@ -38,4 +38,10 @@ public class CreditAgreementDaoImpl implements CreditAgreementDao {
     public CreditAgreement findById(Long id) {
         return template.getSessionFactory().getCurrentSession().get(CreditAgreement.class, id);
     }
+
+    @Override
+    public List<CreditAgreement> findBySign() {
+        return template.getSessionFactory().getCurrentSession()
+                .createQuery("from CreditAgreement credit where credit.sign=1", CreditAgreement.class).getResultList();
+    }
 }

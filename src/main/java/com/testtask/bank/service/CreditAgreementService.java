@@ -23,6 +23,11 @@ public class CreditAgreementService {
     }
 
     @Transactional
+    public List<CreditAgreement> findBySign() {
+        return dao.findBySign();
+    }
+
+    @Transactional
     public CreditAgreement save(CreditAgreement credit) {
         return dao.save(credit);
     }

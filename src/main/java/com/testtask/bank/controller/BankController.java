@@ -74,7 +74,7 @@ public class BankController {
 
     @GetMapping("/credit_agrmt_list")
     public String showCreditAgrmtList(Model model) {
-        model.addAttribute("credit_agreement", creditAgreementService.getAll());
+        model.addAttribute("credit_agreement", creditAgreementService.findBySign());
         return "credit_agrmt_list";
     }
 
