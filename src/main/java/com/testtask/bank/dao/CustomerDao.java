@@ -6,7 +6,5 @@ import java.util.List;
 
 public interface CustomerDao {
     List<Customer> findAll();
-    void save(Customer customer);
-    List<Customer> findByPhoneNumber(int poneNumber);
-    Customer findById(int id);
+    List<Customer> findByParams(String param);
 }

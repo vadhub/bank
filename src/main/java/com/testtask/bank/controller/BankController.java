@@ -2,15 +2,18 @@ package com.testtask.bank.controller;
 
 import com.testtask.bank.entity.CreditAgreement;
 import com.testtask.bank.entity.CreditApp;
+import com.testtask.bank.entity.Customer;
 import com.testtask.bank.service.CreditAgreementService;
 import com.testtask.bank.service.CreditAppService;
 import com.testtask.bank.service.CustomerService;
+import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
+import java.util.List;
 
 @Controller
 public class BankController {
@@ -63,6 +66,12 @@ public class BankController {
     @GetMapping("/customer_list")
     public String showCustomerList(Model model) {
         model.addAttribute("customer", customerService.getAll());
+        return "customer_list";
+    }
+
+    @GetMapping("/search")
+    public String searchCustomers(@RequestParam("param") String param, Model model) {
+        model.addAttribute("customer", customerService.findByParam(param));
         return "customer_list";
     }
 

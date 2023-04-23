@@ -1,6 +1,7 @@
 package com.testtask.bank.dao;
 
 import com.testtask.bank.entity.Customer;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -23,17 +24,23 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public void save(Customer customer) {
-        template.save(customer);
-    }
+    public List<Customer> findByParams(String param) {
 
-    @Override
-    public List<Customer> findByPhoneNumber(int poneNumber) {
-        return List.of(new Customer());
-    }
+        List<Customer> customers;
 
-    @Override
-    public Customer findById(int id) {
-        return template.getSessionFactory().getCurrentSession().get(Customer.class, id);
+        if (param != null && !param.isEmpty()) {
+            Query query = template.getSessionFactory().getCurrentSession()
+                    .createQuery("from Customer customer " +
+                                    "where lower(customer.firstName) like :theParam " +
+                                    "or lower(customer.lastName) like :theParam " +
+                                    "or lower(customer.patronymic) like :theParam",
+                            Customer.class);
+            query.setParameter("theParam", "%" + param +"%");
+            customers = query.getResultList();
+        } else {
+            customers = template.loadAll(Customer.class);
+        }
+
+        return customers;
     }
 }

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <html>
 <head>
@@ -12,6 +13,10 @@
     <h1>Список клиентов</h1>
 
     <div class="row">
+        <form:form action="search" method="GET">
+            Search customer: <input type="text" name="theParam" />
+            <input type="submit" value="Search" class="add-button" />
+        </form:form>
         <table class="table table-hover">
             <thead>
             <tr>

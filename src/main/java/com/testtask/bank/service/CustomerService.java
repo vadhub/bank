@@ -23,12 +23,7 @@ public class CustomerService {
     }
 
     @Transactional
-    public void save(Customer customer) {
-        dao.save(customer);
-    }
-
-    @Transactional
-    public Customer findById(int id) {
-        return dao.findById(id);
+    public List<Customer> findByParam(String param) {
+        return dao.findByParams(param);
     }
 }
