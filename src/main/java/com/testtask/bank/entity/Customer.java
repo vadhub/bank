@@ -30,7 +30,7 @@ public class Customer {
     private int number;
 
     @Column(name = "family_status")
-    private int familyStatus;
+    private String familyStatus;
 
     @Column(name = "phone_number")
     private int phoneNumber;
@@ -42,7 +42,7 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String firstName, String lastName, String patronymic, String adress, int seria, int number, int familyStatus, int phoneNumber) {
+    public Customer(String firstName, String lastName, String patronymic, String adress, int seria, int number, String familyStatus, int phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.patronymic = patronymic;
@@ -125,11 +125,11 @@ public class Customer {
         this.number = number;
     }
 
-    public int getFamilyStatus() {
+    public String getFamilyStatus() {
         return familyStatus;
     }
 
-    public void setFamilyStatus(int familyStatus) {
+    public void setFamilyStatus(String familyStatus) {
         this.familyStatus = familyStatus;
     }
 

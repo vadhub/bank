@@ -55,8 +55,11 @@
 
                 <div class="form-group">
                     <label for="familyStatus">Семейный статус</label>
-                    <input type="number" class="form-control" id="familyStatus" name="customer.familyStatus"
-                           placeholder="Семейный статус">
+                    <select class="form-control" id="familyStatus" name="customer.familyStatus">
+                        <option>Одинок(а)</option>
+                        <option>В гражданском браке</option>
+                        <option>Женат(а)</option>
+                    </select>
                 </div>
             </div>
         </div>
