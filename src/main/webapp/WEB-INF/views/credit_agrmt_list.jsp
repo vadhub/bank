@@ -27,8 +27,8 @@
                     <td>${crt.creditApp.customer.lastName}</td>
                     <td>${crt.creditApp.sum}</td>
                     <td>${crt.creditApp.period}</td>
-                    <td>${crt.dateSigh}</td>
-                    <td>${crt.sigh==1 ? 'Подписан' : 'Не подписан'}</td>
+                    <td>${crt.dateSign}</td>
+                    <td>${crt.sign==1 ? 'Подписан' : 'Не подписан'}</td>
                 </tr>
             </c:forEach>
             </tbody>
