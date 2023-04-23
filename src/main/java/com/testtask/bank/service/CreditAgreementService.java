@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class CreditAgreementService {
 
-    private CreditAgreementDao dao;
+    private final CreditAgreementDao dao;
 
     @Autowired
     public CreditAgreementService(CreditAgreementDao dao) {

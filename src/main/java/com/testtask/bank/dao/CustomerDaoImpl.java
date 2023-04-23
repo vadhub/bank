@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public class CustomerDaoImpl implements CustomerDao {
 
-    private HibernateTemplate template;
+    private final HibernateTemplate template;
 
     @Autowired
     public CustomerDaoImpl(HibernateTemplate template) {

@@ -11,7 +11,7 @@ import java.util.Random;
 
 @Service
 public class CreditAppService {
-    private CreditAppDao dao;
+    private final CreditAppDao dao;
 
     @Autowired
     public CreditAppService(CreditAppDao dao) {

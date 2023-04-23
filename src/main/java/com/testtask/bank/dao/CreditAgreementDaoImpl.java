@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public class CreditAgreementDaoImpl implements CreditAgreementDao {
 
-    private HibernateTemplate template;
+    private final HibernateTemplate template;
 
     @Autowired
     public CreditAgreementDaoImpl(HibernateTemplate template) {
