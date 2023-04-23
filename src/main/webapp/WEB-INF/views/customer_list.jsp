@@ -14,20 +14,20 @@
 
     <div class="row">
         <form:form action="search" method="GET">
-            Search customer: <input type="text" name="param" class="form-control"/>
+            Поиск клиента: <input type="text" name="param" class="form-control" placeholder="Введите данные клиента"/>
             <input type="submit" value="Search" class="btn btn-warning" />
         </form:form>
         <table class="table table-hover">
             <thead>
             <tr>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Patronymic</th>
-                <th scope="col">Address</th>
-                <th scope="col">Seria</th>
-                <th scope="col">Number</th>
-                <th scope="col">Family Status</th>
-                <th scope="col">Phone Number</th>
+                <th scope="col">Имя</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">Отчество</th>
+                <th scope="col">Адрес</th>
+                <th scope="col">Серия</th>
+                <th scope="col">Номер</th>
+                <th scope="col">Семейное положение</th>
+                <th scope="col">Номер телефона</th>
             </tr>
             </thead>
             <tbody>
