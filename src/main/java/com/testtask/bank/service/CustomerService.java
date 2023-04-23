@@ -24,6 +24,6 @@ public class CustomerService {
 
     @Transactional
     public List<Customer> findByParam(String param) {
-        return dao.findByParams(param);
+        return dao.findByParams(param.trim());
     }
 }

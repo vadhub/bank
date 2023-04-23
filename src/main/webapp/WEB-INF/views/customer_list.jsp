@@ -14,7 +14,7 @@
 
     <div class="row">
         <form:form action="search" method="GET">
-            Search customer: <input type="text" name="param" />
+            Search customer: <input type="text" name="param" class="form-control"/>
             <input type="submit" value="Search" class="btn btn-warning" />
         </form:form>
         <table class="table table-hover">
