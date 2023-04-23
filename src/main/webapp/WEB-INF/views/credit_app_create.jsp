@@ -44,12 +44,14 @@
                 <div class="form-group">
                     <label for="seria">Серия</label>
                     <input type="number" class="form-control" id="seria" name="customer.seria"
+                           min="1000" max="9999"
                            placeholder="Ввелите серию">
                 </div>
 
                 <div class="form-group">
                     <label for="number">Номер</label>
                     <input type="number" class="form-control" id="number" name="customer.number"
+                           min="100000" max="999999"
                            placeholder="Введите номер">
                 </div>
 
@@ -66,8 +68,8 @@
 
         <div class="col">
             <div class="form-group">
-                <label for="adress">Адрес</label>
-                <textarea class="form-control" id="adress" name="customer.adress" rows="2"
+                <label for="address">Адрес</label>
+                <textarea class="form-control" id="address" name="customer.address" rows="2"
                           placeholder="Введите адрес"> </textarea>
             </div>
         </div>
@@ -106,6 +108,7 @@
                 <div class="form-group">
                     <label for="sum_credit">Сумма кредита</label>
                     <input type="number" class="form-control" id="sum_credit" name="sum"
+                           min="50000" max="100000000"
                            placeholder="Введите сумму кредита">
                 </div>
             </div>
