@@ -18,11 +18,6 @@ public class CreditAgreementDaoImpl implements CreditAgreementDao {
     }
 
     @Override
-    public List<CreditAgreement> findAll() {
-        return template.loadAll(CreditAgreement.class);
-    }
-
-    @Override
     public CreditAgreement save(CreditAgreement agreement) {
         template.save(agreement);
         return agreement;

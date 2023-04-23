@@ -18,11 +18,6 @@ public class CreditAgreementService {
     }
 
     @Transactional
-    public List<CreditAgreement> getAll() {
-        return dao.findAll();
-    }
-
-    @Transactional
     public List<CreditAgreement> findBySign() {
         return dao.findBySign();
     }

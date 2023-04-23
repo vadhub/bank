@@ -37,7 +37,7 @@
         <button id="sign_btn" type="submit" class="btn btn-primary">Подписать</button>
     </form:form>
 
-
+<%-- disable button if credit agreement already signed --%>
     <script type="text/javascript">
         const sign = ${creadit_agrmt.sign==1}
         if (sign) document.getElementById("sign_btn").disabled = true;

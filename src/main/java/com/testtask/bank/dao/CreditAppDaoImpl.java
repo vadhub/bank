@@ -30,10 +30,4 @@ public class CreditAppDaoImpl implements CreditAppDao {
         return credit;
     }
 
-    @Override
-    @Transactional
-    public CreditApp findById(Long id) {
-        return template.getSessionFactory().getCurrentSession().get(CreditApp.class, id);
-    }
-
 }

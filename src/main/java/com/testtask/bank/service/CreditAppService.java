@@ -35,7 +35,4 @@ public class CreditAppService {
         return dao.save(credit);
     }
 
-    public CreditApp findById(Long id) {
-        return dao.findById(id);
-    }
 }
