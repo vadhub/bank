@@ -34,6 +34,8 @@ public class CustomerDaoImpl implements CustomerDao {
                                     "where lower(customer.firstName) like :theParam " +
                                     "or lower(customer.lastName) like :theParam " +
                                     "or lower(customer.patronymic) like :theParam " +
+                                    "or concat(lower(customer.firstName),' ',lower(customer.lastName)) like :theParam " +
+                                    "or concat(lower(customer.firstName),' ',lower(customer.lastName),' ',lower(customer.patronymic)) like :theParam " +
                                     "or cast(customer.seria as string) like :theParam " +
                                     "or cast(customer.number as string) like :theParam " +
                                     "or cast(customer.phoneNumber as string) like :theParam",
