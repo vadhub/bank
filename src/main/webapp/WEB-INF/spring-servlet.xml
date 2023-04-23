@@ -30,7 +30,7 @@
 
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="ds">
         <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/bank"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/bank?useSSL=false"/>
         <property name="username" value="postgres"/>
         <property name="password" value="rootroot"/>
     </bean>
