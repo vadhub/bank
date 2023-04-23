@@ -14,7 +14,7 @@
         ${credit_app.customer.lastName}
         ${credit_app.customer.patronymic}
     </strong>, проживающий по адресу
-        <strong>${credit_app.customer.adress}
+        <strong>${credit_app.customer.address}
         </strong>, паспортные данные -
         серия: <strong>${credit_app.customer.seria}
         </strong>, номер: <strong>${credit_app.customer.number}

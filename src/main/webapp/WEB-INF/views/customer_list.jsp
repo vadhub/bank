@@ -36,7 +36,7 @@
                     <td>${ctm.firstName}</td>
                     <td>${ctm.lastName}</td>
                     <td>${ctm.patronymic}</td>
-                    <td>${ctm.adress}</td>
+                    <td>${ctm.address}</td>
                     <td>${ctm.seria}</td>
                     <td>${ctm.number}</td>
                     <td>${ctm.familyStatus}</td>

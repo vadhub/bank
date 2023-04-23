@@ -20,8 +20,8 @@ public class Customer {
     @Column(name = "patronymic")
     private String patronymic;
 
-    @Column(name = "adress")
-    private String adress;
+    @Column(name = "address")
+    private String address;
 
     @Column(name = "seria")
     private int seria;
@@ -46,7 +46,7 @@ public class Customer {
         this.firstName = firstName;
         this.lastName = lastName;
         this.patronymic = patronymic;
-        this.adress = adress;
+        this.address = adress;
         this.seria = seria;
         this.number = number;
         this.familyStatus = familyStatus;
@@ -60,7 +60,7 @@ public class Customer {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", patronymic='" + patronymic + '\'' +
-                ", adress='" + adress + '\'' +
+                ", adress='" + address + '\'' +
                 ", seria=" + seria +
                 ", number=" + number +
                 ", familyStatus=" + familyStatus +
@@ -101,12 +101,12 @@ public class Customer {
         this.patronymic = patronymic;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getSeria() {
