@@ -27,7 +27,7 @@
                 <th scope="col">Серия</th>
                 <th scope="col">Номер</th>
                 <th scope="col">Семейное положение</th>
-                <th scope="col">Номер телефона</th>
+                <th scope="col">Контактный телефон</th>
             </tr>
             </thead>
             <tbody>

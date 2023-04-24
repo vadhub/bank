@@ -24,7 +24,7 @@
                     <td>${crt.customer.firstName}</td>
                     <td>${crt.customer.lastName}</td>
                     <td>${crt.sum}</td>
-                    <td>${crt.approve==1 ? 'Одобрена' : 'Не одобрена'}</td>
+                    <td>${crt.approve==1 ? 'Одобрен' : 'Не одобрен'}</td>
                 </tr>
             </c:forEach>
             </tbody>
