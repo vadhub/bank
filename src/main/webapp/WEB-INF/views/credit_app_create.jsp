@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone_number">Номер телефона</label>
+                    <label for="phone_number">Контактный телефон</label>
                     <input type="tel" class="form-control" id="phone_number" name="customer.phoneNumber"
                            placeholder="9 (999) 999-99-99" required="required">
                 </div>
@@ -106,7 +106,7 @@
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <label for="sum_credit">Сумма кредита</label>
+                    <label for="sum_credit">Сумма желаемого кредита</label>
                     <input type="number" class="form-control" id="sum_credit" name="sum"
                            min="50000" max="100000000"
                            placeholder="Введите сумму кредита" required="required">
