@@ -12,14 +12,12 @@
     <p>Я <strong>
         ${credit_app.customer.firstName}
         ${credit_app.customer.lastName}
-        ${credit_app.customer.patronymic}
-    </strong>, проживающий по адресу
-        <strong>${credit_app.customer.address}
-        </strong>, паспортные данные -
-        серия: <strong>${credit_app.customer.seria}
-        </strong>, номер: <strong>${credit_app.customer.number}
-        </strong>, заключаю кредитный договор на сумму
-        <strong>${credit_app.sum}</strong>.
+        ${credit_app.customer.patronymic}</strong>, проживающий по адресу
+        <strong>${credit_app.customer.address}</strong>, паспортные данные -
+        серия: <strong>${credit_app.customer.seria}</strong>, номер: <strong>${credit_app.customer.number}</strong>,
+        работающий в <strong>${credit_app.customer.work.nameOrg}</strong> на должности <strong>${credit_app.customer.work.positionJob}</strong>,
+        заключаю кредитный договор на сумму
+        <strong>${credit_app.sum}</strong> р.
         Кредит дается на срок: <strong>${credit_app.period}</strong> д.
     </p>
     <div class="row">

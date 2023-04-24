@@ -6,7 +6,7 @@
 <body>
 <div class="container mt-3">
 
-    <h1>Заявки на кредит</h1>
+    <h1>Кредитные договора</h1>
     <div class="row">
 
         <table class="table table-hover">

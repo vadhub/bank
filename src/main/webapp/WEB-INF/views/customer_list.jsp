@@ -15,7 +15,7 @@
     <div class="row">
         <form:form action="search" method="GET">
             Поиск клиента: <input type="text" name="param" class="form-control" placeholder="Введите данные клиента"/>
-            <input type="submit" value="Search" class="btn btn-warning" />
+            <input type="submit" value="Поиск" class="btn btn-warning" />
         </form:form>
         <table class="table table-hover">
             <thead>
