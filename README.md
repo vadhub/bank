@@ -99,7 +99,7 @@ create table credit_agmt (
 После подписания
 ![approve2](https://drive.google.com/uc?export=view&id=1WgF_0on9bXOxGt3QoKdA4WKIosennTcX)
 
-В случае не одобрения кредита
+В случае отклонения заявки
 ![disapprove](https://drive.google.com/uc?export=view&id=1G2jokvg4E0-7r_U7xMd7KD4LTsNZKG73)
 
 Список клиентов
