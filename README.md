@@ -28,3 +28,23 @@
 4) Выводить список всех подписанных кредитных договоров со статусом подписания
  
 Основное требование к интерфейсу приложения – выполнение описанных функций, красивое оформление, стили можно не делать.
+
+
+
+![main_page](https://drive.google.com/uc?export=view&id=1r8CMOU_jwTYdNI_3fl9tP0bL8KHAcesE)
+
+![app1](https://drive.google.com/uc?export=view&id=14DBht5bJsv5TL8Mdqve2Q8WUiL6eagp4)
+
+![app2](https://drive.google.com/uc?export=view&id=1YQHB9Vqq0jJOFfjh1G2pDxdFa6Ubl28u)
+
+![approve1](https://drive.google.com/uc?export=view&id=17sel7xCwEE3HvfIjq5sMgn04wcSRjpQl)
+
+![approve2](https://drive.google.com/uc?export=view&id=1WgF_0on9bXOxGt3QoKdA4WKIosennTcX)
+
+![disapprove](https://drive.google.com/uc?export=view&id=1G2jokvg4E0-7r_U7xMd7KD4LTsNZKG73)
+
+![list_customers](https://drive.google.com/uc?export=view&id=1-dBSVk6Wdxv1DDwnKPqpwFcuAPqaHwvn)
+
+![list_app](https://drive.google.com/uc?export=view&id=11pwS5x4y999Tutd4N9rt1iAYOgBA_8_K) 
+
+![list_agrmt](https://drive.google.com/uc?export=view&id=1OaqaQ_AIPjBwRh9S4_sw2U6PZKWcKSqy) 
