@@ -35,8 +35,8 @@
 
                 <div class="form-group">
                     <label for="phone_number">Номер телефона</label>
-                    <input type="text" class="form-control" id="phone_number" name="customer.phoneNumber" data-mdb-input-mask="+7 (999)-999-99-99"
-                           placeholder="Номер телефона" required="required">
+                    <input type="tel" class="form-control" id="phone_number" name="customer.phoneNumber"
+                           placeholder="9 (999) 999-99-99" required="required">
                 </div>
             </div>
             <div class="col">
@@ -116,6 +116,10 @@
         <a href="${pageContext.request.contextPath}/main" class="btn btn-warning">На главную</a>
         <button type="submit" class="btn btn-primary">Оформить</button>
     </form:form>
+
+    <script>
+        $("#phone_number").inputmask("8(999) 999-99-99")
+    </script>
 
 </div>
 
