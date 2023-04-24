@@ -26,7 +26,7 @@ public class CreditAppService {
     @Transactional
     public CreditApp save(CreditApp credit) {
         Random random = new Random();
-        if (true) {
+        if (random.nextBoolean()) {
             credit.setPeriod((int) (Math.random() * 335) + 30);
             credit.setApprove(1);
         } else {
