@@ -3,7 +3,7 @@ package com.testtask.bank.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customers")
+@Table(name = "customer")
 public class Customer {
 
     @Id
