@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public class CreditAppDaoImpl implements CreditAppDao {
 
-    private HibernateTemplate template;
+    private final HibernateTemplate template;
 
     @Autowired
     public CreditAppDaoImpl(HibernateTemplate template) {

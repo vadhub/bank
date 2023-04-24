@@ -45,7 +45,7 @@
                     <label for="seria">Серия</label>
                     <input type="number" class="form-control" id="seria" name="customer.seria"
                            min="1000" max="9999"
-                           placeholder="Ввелите серию" required="required">
+                           placeholder="Введите серию" required="required">
                 </div>
 
                 <div class="form-group">

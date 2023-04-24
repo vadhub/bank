@@ -15,9 +15,9 @@ import java.sql.Date;
 @Controller
 public class BankController {
 
-    private CustomerService customerService;
-    private CreditAppService creditAppService;
-    private CreditAgreementService creditAgreementService;
+    private final CustomerService customerService;
+    private final CreditAppService creditAppService;
+    private final CreditAgreementService creditAgreementService;
 
     @Autowired
     public BankController(CustomerService customerService, CreditAppService creditAppService, CreditAgreementService creditAgreementService) {

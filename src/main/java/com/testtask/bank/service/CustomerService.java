@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class CustomerService {
-    private CustomerDao dao;
+    private final CustomerDao dao;
 
     @Autowired
     public CustomerService(CustomerDao dao) {
